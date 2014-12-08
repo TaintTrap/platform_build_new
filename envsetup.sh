@@ -724,7 +724,7 @@ function pid()
 # to the usual ANR traces file
 function systemstack()
 {
-    adb shell echo '""' '>>' /data/anr/traces.txt && adb shell chmod 776 /data/anr/traces.txt && adb shell kill -3 $(pid system_server)
+    adb shell echo '""' '>>' /data/anr/traces.txt && adb shell chmod 776 /data/anr/traces.txt && adb shell kill -QUIT $(pid system_server)
 }
 
 function gdbclient()
