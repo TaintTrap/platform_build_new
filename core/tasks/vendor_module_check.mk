@@ -46,8 +46,8 @@ $(error Error: Product "$(TARGET_PRODUCT)" can not have overlay in vendor tree: 
     $(filter vendor/%, $(PRODUCT_PACKAGE_OVERLAYS) $(DEVICE_PACKAGE_OVERLAYS)))
 endif
 ifneq (,$(filter vendor/%, $(PRODUCT_COPY_FILES)))
-$(error Error: Product "$(TARGET_PRODUCT)" can not have PRODUCT_COPY_FILES from vendor tree: \
-    $(filter vendor/%, $(PRODUCT_COPY_FILES)))
+#$(error Error: Product "$(TARGET_PRODUCT)" can not have PRODUCT_COPY_FILES from vendor tree: \
+#    $(filter vendor/%, $(PRODUCT_COPY_FILES)))
 endif
 
 $(foreach m, $(_vendor_check_modules), \
